@@ -19,81 +19,200 @@
             <span class="brand-name">FitLife</span>
         </a>
 
-        <a class="download-button" href="#" aria-label="Baixar o app FitLife">Baixar o app</a>
+        <div class="header-actions">
+            <div class="lang-switcher" aria-label="Seleção de idioma">
+                <button class="lang-button is-active" type="button" data-lang="pt-BR" aria-label="Português do Brasil" aria-pressed="true">PT-BR</button>
+                <button class="lang-button" type="button" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
+            </div>
+
+            <a class="download-button" href="#" data-i18n-key="downloadButtonText" aria-label="Baixar o app FitLife">Baixar o app</a>
+        </div>
     </header>
 
     <main>
         <section class="hero" id="hero" aria-labelledby="hero-title">
             <div class="hero-copy">
-                <p class="eyebrow">Sua rotina, em movimento</p>
-                <h1 id="hero-title">O app perfeito para acompanhar sua vida fitness.</h1>
+                <p class="eyebrow" data-i18n-key="heroEyebrow">Sua rotina, em movimento</p>
+                <h1 id="hero-title" data-i18n-key="heroTitle">O app perfeito para acompanhar sua vida fitness.</h1>
             </div>
 
             <div class="hero-phone">
-                <img src="images/print_1.png" alt="Tela de resumo do app FitLife com dados de atividade física">
+                <img src="images/print_1.png" alt="Tela de resumo do app FitLife com dados de atividade física" data-i18n-key="heroPhoneAlt" data-i18n-attr="alt">
             </div>
 
-            <div class="hero-features" aria-label="Pontos-chave do app">
-                <p class="eyebrow">Tudo no seu ritmo</p>
+            <div class="hero-features" aria-label="Pontos-chave do app" data-i18n-key="heroFeaturesAria" data-i18n-attr="aria-label">
+                <p class="eyebrow" data-i18n-key="heroFeaturesEyebrow">Tudo no seu ritmo</p>
                 <ul>
-                    <li><span aria-hidden="true">❤️</span> Saúde</li>
-                    <li><span aria-hidden="true">🏃</span> Exercício</li>
-                    <li><span aria-hidden="true">🤷‍♂️</span> Amigos</li>
+                    <li><span aria-hidden="true">❤️</span> <span data-i18n-key="featureHealth">Saúde</span></li>
+                    <li><span aria-hidden="true">🏃</span> <span data-i18n-key="featureExercise">Exercício</span></li>
+                    <li><span aria-hidden="true">🤷‍♂️</span> <span data-i18n-key="featureFriends">Amigos</span></li>
                 </ul>
             </div>
         </section>
 
         <section class="features" id="funcionalidades" aria-labelledby="features-title">
             <div class="section-heading">
-                <p class="eyebrow">Feito para você</p>
-                <h2 id="features-title">Tudo o que você precisa para cuidar da sua rotina.</h2>
+                <p class="eyebrow" data-i18n-key="featuresEyebrow">Feito para você</p>
+                <h2 id="features-title" data-i18n-key="featuresTitle">Tudo o que você precisa para cuidar da sua rotina.</h2>
             </div>
 
             <article class="feature">
                 <div class="feature-image">
-                    <img src="images/print_2.png" alt="Tela do FitLife com contagem de calorias">
+                    <img src="images/print_2.png" alt="Tela do FitLife com contagem de calorias" data-i18n-key="featureImageOneAlt" data-i18n-attr="alt">
                 </div>
                 <div class="feature-copy">
                     <p class="feature-number">01</p>
-                    <h3>Acompanhe suas calorias</h3>
-                    <p>Tenha uma visão clara da sua alimentação e acompanhe suas metas diárias com praticidade.</p>
+                    <h3 data-i18n-key="featureOneTitle">Acompanhe suas calorias</h3>
+                    <p data-i18n-key="featureOneText">Tenha uma visão clara da sua alimentação e acompanhe suas metas diárias com praticidade.</p>
                 </div>
             </article>
 
             <article class="feature feature-reverse">
                 <div class="feature-image">
-                    <img src="images/print_3.png" alt="Tela do FitLife com opções de exercícios">
+                    <img src="images/print_3.png" alt="Tela do FitLife com opções de exercícios" data-i18n-key="featureImageTwoAlt" data-i18n-attr="alt">
                 </div>
                 <div class="feature-copy">
                     <p class="feature-number">02</p>
-                    <h3>Encontre o exercício ideal</h3>
-                    <p>Escolha entre corrida, musculação e outras atividades para deixar cada treino mais próximo dos seus objetivos.</p>
+                    <h3 data-i18n-key="featureTwoTitle">Encontre o exercício ideal</h3>
+                    <p data-i18n-key="featureTwoText">Escolha entre corrida, musculação e outras atividades para deixar cada treino mais próximo dos seus objetivos.</p>
                 </div>
             </article>
 
             <article class="feature">
                 <div class="feature-image">
-                    <img src="images/print_4.png" alt="Tela do FitLife para compartilhar atividades com amigos">
+                    <img src="images/print_4.png" alt="Tela do FitLife para compartilhar atividades com amigos" data-i18n-key="featureImageThreeAlt" data-i18n-attr="alt">
                 </div>
                 <div class="feature-copy">
                     <p class="feature-number">03</p>
-                    <h3>Compartilhe a evolução</h3>
-                    <p>Convide seus amigos para acompanhar suas conquistas e manter a motivação sempre em movimento.</p>
+                    <h3 data-i18n-key="featureThreeTitle">Compartilhe a evolução</h3>
+                    <p data-i18n-key="featureThreeText">Convide seus amigos para acompanhar suas conquistas e manter a motivação sempre em movimento.</p>
                 </div>
             </article>
         </section>
 
         <section class="download-section" id="download" aria-labelledby="download-title">
-            <p class="eyebrow">Comece hoje</p>
-            <h2 id="download-title">Sua melhor versão começa com um passo.</h2>
-            <a class="download-button download-button-large" href="#hero">Baixar o app</a>
-            <p class="download-note">Totalmente gratuito</p>
+            <p class="eyebrow" data-i18n-key="downloadEyebrow">Comece hoje</p>
+            <h2 id="download-title" data-i18n-key="downloadTitle">Sua melhor versão começa com um passo.</h2>
+            <a class="download-button download-button-large" href="#hero" data-i18n-key="downloadButtonText" data-i18n-attr="aria-label" aria-label="Baixar o app FitLife">Baixar o app</a>
+            <p class="download-note" data-i18n-key="downloadNote">Totalmente gratuito</p>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>Todos os direitos reservados</p>
+        <p data-i18n-key="footerText">Todos os direitos reservados</p>
     </footer>
+
+    <script>
+        const translations = {
+            'pt-BR': {
+                downloadButtonText: 'Baixar o app',
+                downloadButtonAria: 'Baixar o app FitLife',
+                heroEyebrow: 'Sua rotina, em movimento',
+                heroTitle: 'O app perfeito para acompanhar sua vida fitness.',
+                heroFeaturesAria: 'Pontos-chave do app',
+                heroFeaturesEyebrow: 'Tudo no seu ritmo',
+                featureHealth: 'Saúde',
+                featureExercise: 'Exercício',
+                featureFriends: 'Amigos',
+                heroPhoneAlt: 'Tela de resumo do app FitLife com dados de atividade física',
+                featuresEyebrow: 'Feito para você',
+                featuresTitle: 'Tudo o que você precisa para cuidar da sua rotina.',
+                featureImageOneAlt: 'Tela do FitLife com contagem de calorias',
+                featureOneTitle: 'Acompanhe suas calorias',
+                featureOneText: 'Tenha uma visão clara da sua alimentação e acompanhe suas metas diárias com praticidade.',
+                featureImageTwoAlt: 'Tela do FitLife com opções de exercícios',
+                featureTwoTitle: 'Encontre o exercício ideal',
+                featureTwoText: 'Escolha entre corrida, musculação e outras atividades para deixar cada treino mais próximo dos seus objetivos.',
+                featureImageThreeAlt: 'Tela do FitLife para compartilhar atividades com amigos',
+                featureThreeTitle: 'Compartilhe a evolução',
+                featureThreeText: 'Convide seus amigos para acompanhar suas conquistas e manter a motivação sempre em movimento.',
+                downloadEyebrow: 'Comece hoje',
+                downloadTitle: 'Sua melhor versão começa com um passo.',
+                downloadNote: 'Totalmente gratuito',
+                footerText: 'Todos os direitos reservados'
+            },
+            en: {
+                downloadButtonText: 'Download app',
+                downloadButtonAria: 'Download the FitLife app',
+                heroEyebrow: 'Your routine, in motion',
+                heroTitle: 'The perfect app to keep up with your fitness life.',
+                heroFeaturesAria: 'Key highlights of the app',
+                heroFeaturesEyebrow: 'Everything at your pace',
+                featureHealth: 'Health',
+                featureExercise: 'Exercise',
+                featureFriends: 'Friends',
+                heroPhoneAlt: 'FitLife summary screen with physical activity data',
+                featuresEyebrow: 'Made for you',
+                featuresTitle: 'Everything you need to take care of your routine.',
+                featureImageOneAlt: 'FitLife screen with calorie tracking',
+                featureOneTitle: 'Track your calories',
+                featureOneText: 'Get a clear view of your diet and keep up with your daily goals in a practical way.',
+                featureImageTwoAlt: 'FitLife screen with exercise options',
+                featureTwoTitle: 'Find the ideal exercise',
+                featureTwoText: 'Choose between running, weight training and other activities to bring each workout closer to your goals.',
+                featureImageThreeAlt: 'FitLife screen for sharing activities with friends',
+                featureThreeTitle: 'Share your progress',
+                featureThreeText: 'Invite your friends to follow your achievements and keep motivation always on the move.',
+                downloadEyebrow: 'Start today',
+                downloadTitle: 'Your best version starts with one step.',
+                downloadNote: 'Completely free',
+                footerText: 'All rights reserved'
+            }
+        };
+
+        const languageButtons = document.querySelectorAll('.lang-button');
+        const translatableElements = document.querySelectorAll('[data-i18n-key]');
+
+        function applyLanguage(lang) {
+            const selectedLanguage = translations[lang] || translations['pt-BR'];
+
+            translatableElements.forEach((element) => {
+                const key = element.dataset.i18nKey;
+                const value = selectedLanguage[key];
+
+                if (!value) {
+                    return;
+                }
+
+                const attributeName = element.dataset.i18nAttr;
+
+                if (attributeName) {
+                    element.setAttribute(attributeName, value);
+                    return;
+                }
+
+                element.textContent = value;
+            });
+
+            const mainDownloadButton = document.querySelector('.download-button');
+            if (mainDownloadButton) {
+                mainDownloadButton.textContent = selectedLanguage.downloadButtonText;
+                mainDownloadButton.setAttribute('aria-label', selectedLanguage.downloadButtonAria);
+            }
+
+            const largeDownloadButton = document.querySelector('.download-button-large');
+            if (largeDownloadButton) {
+                largeDownloadButton.textContent = selectedLanguage.downloadButtonText;
+                largeDownloadButton.setAttribute('aria-label', selectedLanguage.downloadButtonAria);
+            }
+
+            languageButtons.forEach((button) => {
+                const isActive = button.dataset.lang === lang;
+                button.classList.toggle('is-active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+
+            document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+        }
+
+        languageButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                applyLanguage(button.dataset.lang);
+            });
+        });
+
+        applyLanguage('pt-BR');
+    </script>
 
 </body>
 

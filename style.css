@@ -30,6 +30,7 @@ a {
 .site-header {
     align-items: center;
     display: flex;
+    gap: 16px;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1240px;
@@ -55,6 +56,44 @@ a {
     justify-content: center;
     line-height: 1;
     width: 38px;
+}
+
+.header-actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: flex-end;
+}
+
+.lang-switcher {
+    align-items: center;
+    background: var(--green-light);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+}
+
+.lang-button {
+    background: transparent;
+    border: 0;
+    border-radius: 999px;
+    color: var(--muted);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 8px 12px;
+    transition: all 180ms ease;
+}
+
+.lang-button.is-active {
+    background: #ffffff;
+    color: var(--green-dark);
+    box-shadow: 0 8px 20px rgba(18, 63, 49, 0.08);
 }
 
 .download-button {
@@ -146,20 +185,21 @@ h1 {
     padding: 12px 0;
 }
 
-.hero-features li span {
+.hero-features li span:first-child {
     align-items: center;
-    background: var(--green-light);
-    border-radius: 50%;
     display: flex;
     font-size: 1.1rem;
-    height: 34px;
     justify-content: center;
-    width: 34px;
 }
 
 @media (max-width: 760px) {
     .site-header {
         padding: 18px 22px;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: flex-end;
     }
 
     .hero {
@@ -309,6 +349,44 @@ h2 {
 
 .site-footer p {
     margin-bottom: 0;
+}
+
+@media (max-width: 420px) {
+    .site-header {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: space-between;
+    }
+
+    .brand {
+        flex: 1 1 100%;
+    }
+
+    .header-actions {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .lang-switcher {
+        flex: 1 1 auto;
+        justify-content: center;
+        min-width: 0;
+    }
+
+    .lang-button {
+        font-size: 0.72rem;
+        padding: 7px 9px;
+    }
+
+    .download-button {
+        flex: 1 1 auto;
+        min-width: 0;
+        text-align: center;
+        white-space: nowrap;
+    }
 }
 
 @media (min-width: 761px) {

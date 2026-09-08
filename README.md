@@ -8,7 +8,7 @@ Construir uma pagina clean e sofisticada para um aplicativo fitness, usando uma 
 
 A pagina foi organizada em quatro partes principais:
 
-- Header com a marca e o botao de download
+- Header com a marca, seletor de idioma e botao de download
 - Hero com a mensagem principal, o print de destaque e os pontos-chave do app
 - Secao de funcionalidades com tres recursos explicados
 - CTA e rodape
@@ -42,6 +42,12 @@ O documento usa elementos semanticos para separar as areas da pagina:
 - `footer`: apresenta a informacao de direitos reservados
 
 Essa organizacao facilita a leitura do codigo, melhora a acessibilidade e deixa mais claro o papel de cada bloco.
+
+### Header e idioma
+
+O cabecalho apresenta a marca FitLife e, ao lado, um controle simples para alternar entre PT-BR e EN. Esse seletor foi desenhado como uma pequena switcher com botoes visuais, mantendo a navegacao rapida e sem adicionar muita complexidade ao codigo.
+
+Os textos da pagina foram organizados em um objeto de traducoes para facilitar a manutencao. Ao clicar no idioma desejado, os elementos com atributo `data-i18n-key` recebem o conteudo correspondente, incluindo textos visuais e atributos como `alt` e `aria-label`.
 
 ### Hero
 
@@ -113,8 +119,10 @@ A implementacao das novas secoes segue uma abordagem mobile-first:
 - O CTA ocupa toda a largura visual da tela
 - No desktop, a secao de funcionalidades passa a usar CSS Grid com duas colunas
 - A segunda funcionalidade inverte a ordem para formar o padrao imagem/texto, texto/imagem, imagem/texto
+- O header ajusta seu comportamento em telas estreitas para evitar overflow do seletor de idioma e do botao de download
+- O grupo de controles do topo pode quebrar em duas linhas em resolucoes muito pequenas, sem comprometer legibilidade
 
-A media query `@media (min-width: 761px)` aplica apenas os ajustes necessarios para telas maiores. O layout existente da hero continua usando sua media query para adaptar a apresentacao em telas pequenas.
+A media query `@media (min-width: 761px)` aplica apenas os ajustes necessarios para telas maiores. O layout existente da hero continua usando sua media query para adaptar a apresentacao em telas pequenas, com ajustes extras em pontos muito pequenos como 320px.
 
 ### Espacamento e hierarquia
 
@@ -130,7 +138,33 @@ O botao de download possui estados `hover` e `focus-visible`:
 - O botao sobe levemente com `transform`
 - O estado de foco permanece visivel para navegacao por teclado
 
+O seletor de idioma tambem recebe destaque visual ao estar ativo, mostrando ao usuario qual linguagem esta selecionada.
+
 A propriedade `scroll-behavior: smooth` deixa a navegacao entre ancoras mais fluida.
+
+## JavaScript aplicado
+
+A pagina foi atualizada com um script simples para gerenciar a internacionalizacao sem depender de bibliotecas ou frameworks.
+
+### Estrutura da traducao
+
+Os textos sao armazenados em um objeto JavaScript com chaves por idioma:
+
+- `pt-BR`: textos em portugues
+- `en`: textos em ingles
+
+Cada elemento da pagina que deve mudar de idioma possui o atributo `data-i18n-key`, e o codigo identifica a chave correspondente para trocar o conteudo do texto visual ou de atributos como `aria-label` e `alt`.
+
+### Alternancia entre idiomas
+
+Os botoes de idioma possuem os atributos `data-lang`, e o codigo observa o clique para:
+
+- atualizar o texto visivel dos elementos traduziveis
+- ajustar `aria-label` e `alt` quando necessario
+- alterar o estado ativo do botao escolhido
+- definir o idioma do documento em `document.documentElement.lang`
+
+Essa abordagem e simples, leve e muito facil de manter, especialmente para uma landing page com poucas secoes e um conjunto limitado de textos.
 
 ## Acessibilidade
 
@@ -142,6 +176,8 @@ Foram aplicados alguns cuidados basicos:
 - A lista de pontos-chave possui `aria-label`
 - O foco do teclado e preservado com `:focus-visible`
 - O logo possui um `aria-label` explicando sua funcao
+- O seletor de idioma expande a acessibilidade ao indicar o idioma ativo e manter labels claras para leitores de tela
+- Os botoes e links permanecem com foco visivel em navegacao por teclado
 
 ## Como visualizar
 
@@ -163,3 +199,6 @@ Basta abrir o arquivo `index.html` no navegador ou usar a extensao Live Server n
 - Estados de interacao
 - Uso de textos alternativos em imagens
 - Organizacao de layout por secoes
+- Internacionalizacao simples com JavaScript
+- Alternancia de idioma em tempo real
+- Ajustes de responsividade para telas pequenas
